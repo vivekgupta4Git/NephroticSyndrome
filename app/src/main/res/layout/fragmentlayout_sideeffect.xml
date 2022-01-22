@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:background="?android:attr/colorBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/tv_csideEffects"
+            android:padding="5dp"
+            android:text="@string/Choose_SideEffects"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:layout_margin="20dp"
+            android:id="@+id/sp_sideEffects"
+            android:layout_toRightOf="@+id/tv_csideEffects"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_margin="11dp"
+            android:layout_below="@+id/tv_csideEffects"
+            android:id="@+id/tv_sideeffectexplain"
+            android:padding="5dp"
+            android:text="@string/tv_sideeffectexplanation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+
+            android:hint="@string/sideEffectHintExplanation"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/sp_sideEffects"
+            android:id="@+id/et_sideEffectsExplationText"
+            android:layout_toRightOf="@+id/tv_sideeffectexplain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/saveBtn_SideEffects"
+            android:text="@string/button_save_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/et_sideEffectsExplationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Button>
+    </RelativeLayout>
+

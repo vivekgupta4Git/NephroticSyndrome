@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/createnew_linearyLaout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bt_TabSideEffects"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="SideEffect"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <Button
+                android:id="@+id/bt_TabMedicine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Medicine"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <Button
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:id="@+id/bt_TabDisease"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Disease" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="3"
+            android:id="@+id/createnew_2ndlinealayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/createnew_linearyLaout"
+            android:orientation="horizontal">
+
+            <Button
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:id="@+id/bt_TabDoctor"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Doctor" />
+
+            <Button
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:id="@+id/bt_TabPatient"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Patient">
+
+            </Button>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/framelayout_createNewSideEffects"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/createnew_2ndlinealayout"
+            android:layout_margin="10dp" />
+
+
+        <FrameLayout
+            android:id="@+id/framelayout_createNewMedicine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/createnew_2ndlinealayout"
+            android:layout_margin="10dp" />
+
+        <FrameLayout
+            android:id="@+id/framelayout_createNewDisease"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/createnew_2ndlinealayout"
+            android:layout_margin="10dp" />
+
+        <FrameLayout
+            android:id="@+id/framelayout_createNewDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/createnew_2ndlinealayout"
+            android:layout_margin="10dp" />
+
+        <FrameLayout
+            android:id="@+id/framelayout_createNewPatient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/createnew_2ndlinealayout"
+            android:layout_margin="10dp">
+
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

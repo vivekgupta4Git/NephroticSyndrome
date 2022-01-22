@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/text_for_user"
+        android:text="Please Select Doctor From List "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/spinner_treatment_child"
+        android:layout_margin="25dp"
+        android:layout_below="@id/text_for_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_treatmentPage2"
+        android:text="Done"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:layout_below="@id/spinner_treatment_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+   </RelativeLayout>
+
+</ScrollView>

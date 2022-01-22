@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stretchColumns="1,2">
+
+
+        //Row 1
+
+        <TableRow android:layout_margin="10dp">
+
+            <TextView android:text="Visit Date :-" />
+
+            <TextView
+
+                android:linksClickable="true"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:id="@+id/tv_visitDate" />
+        </TableRow>
+
+        //Row 2
+
+        <TableRow android:layout_margin="10dp">
+
+            <TextView android:text="Visited Doctor  :-" />
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:id="@+id/tv_visitedToDoctor" />
+        </TableRow>
+
+
+        //Row 3
+
+        <TableRow android:layout_margin="10dp">
+
+            <TextView android:text="For Disease (s)  :-" />
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:id="@+id/tv_diseaseList" />
+        </TableRow>
+
+
+        //Row 4
+
+        <TableRow android:layout_margin="10dp">
+
+            <TextView android:text="Medicines Prescribed   :-" />
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:id="@+id/tv_prescribed_Medicine_List" />
+        </TableRow>
+
+        //Row 5
+
+        <TableRow android:layout_margin="10dp">
+
+            <TextView android:text="Follow Up Date    :-" />
+
+            <TextView
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:id="@+id/tv_followUpDate" />
+        </TableRow>
+
+
+        <Button
+            android:id="@+id/btn_yesSaveAll"
+            android:text="Yes,Exactly,Save All this For me !!"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </TableLayout>
+
+</ScrollView>

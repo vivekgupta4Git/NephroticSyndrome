@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_patient_CreateNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="First Name :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:inputType="textPersonName"
+            android:id="@+id/et_patient_firstName_editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_patient_CreateNew"
+            android:gravity="center"
+            android:hint="Enter Patient's First Name"
+            android:autofillHints="" />
+
+        <TextView
+
+            android:id="@+id/tv_patient_lastName_CreateNew"
+
+            android:layout_below="@id/tv_patient_CreateNew"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Last Name :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:id="@+id/et_patient_lastName_editName"
+
+            android:layout_below="@id/et_patient_firstName_editName"
+            android:layout_toEndOf="@id/tv_patient_lastName_CreateNew"
+
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Patient's Last Name"
+            android:autofillHints="" />
+
+
+        <TextView
+            android:id="@+id/tv_patient_age_CreateNew"
+
+            android:layout_below="@id/tv_patient_lastName_CreateNew"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Age :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:id="@+id/et_patient_age_editName"
+
+            android:layout_below="@id/et_patient_lastName_editName"
+            android:layout_toEndOf="@id/tv_patient_age_CreateNew"
+
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Patient's Age"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tv_patient_weight_CreateNew"
+
+            android:layout_below="@id/tv_patient_age_CreateNew"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Weight :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:id="@+id/et_patient_weight_editName"
+
+            android:layout_toEndOf="@id/tv_patient_weight_CreateNew"
+            android:layout_below="@id/et_patient_age_editName"
+
+            android:inputType="numberDecimal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:hint="Enter Patient's Weight"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tv_patient_snap_CreateNew"
+
+            android:layout_below="@id/tv_patient_weight_CreateNew"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Choose Snap :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:id="@+id/et_patient_snap_editName"
+
+            android:layout_below="@id/et_patient_weight_editName"
+            android:layout_toEndOf="@id/tv_patient_snap_CreateNew"
+
+            android:inputType="text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Choose photo"
+            android:autofillHints="" />
+    <ImageView
+        android:id="@+id/iv_chooseSnapOfPatient"
+
+        android:layout_toEndOf="@id/et_patient_snap_editName"
+        android:layout_below="@+id/et_patient_weight_editName"
+
+        android:src="@drawable/ic_register_24"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_below="@id/iv_chooseSnapOfPatient"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <Button
+        android:text="Create"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:id="@+id/bt_patient_details_saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    <ListView
+
+        android:id="@+id/list_patient__details"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    </ListView>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/text_for_user"
+        android:text="Select All Medicine Prescibed by Doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:weightSum="4"
+        android:id="@+id/linearlayout1"
+        android:layout_below="@id/text_for_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:layout_weight="2"
+            android:id="@+id/spinner_treatment_4_child"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/text_for_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/et_dosage_treatment_child_page4"
+            android:hint="Dosage Quantity"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_below="@id/linearlayout1"
+        android:id="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:id="@+id/btn_advance_view"
+            android:layout_margin="10dp"
+            android:text="Advance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_margin="10dp"
+            android:text="Add in List"
+            android:id="@+id/btn_addToList_treatment4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_margin="10dp"
+            android:text="Done"
+            android:id="@+id/btn_done_treatmentPage4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/linearlayout3"
+    android:layout_below="@id/linearlayout2"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="Select Frequency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:layout_weight="2"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/sp_frequency_of_medicine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="Choose Unit "
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:layout_weight="2"
+            android:id="@+id/sp_unit_spinner"
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+    </LinearLayout>
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:id="@+id/preview_of_what_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+</LinearLayout>
+
+    <ListView
+        android:layout_below="@id/linearlayout3"
+        android:layout_margin="10dp"
+        android:id="@+id/listview_treatment_childpage4"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
+
+   </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

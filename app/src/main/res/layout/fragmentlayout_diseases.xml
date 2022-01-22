@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="?android:attr/colorBackground">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Here You can add any problem/disease occur to "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:text="patient on a day like Fever,cold and cough"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+    <TextView
+        android:id="@+id/tv_list_of_current_infection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:layout_margin="20dp"
+        android:text="Currently Patient is Suffering from following diseases"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_for_currentDiseases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_list_of_current_infection"
+        android:layout_margin="5dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recyclerview_for_currentDiseases"
+        android:stretchColumns="0,1,2">
+
+
+        <TextView
+            android:id="@+id/tv_header_in_Diseaes"
+            android:layout_width="wrap_content"
+            android:text="@string/Add_Disease_header"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+        <!-- ROW 1 -->
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_cdieases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Choose_Disease"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <Spinner
+                android:id="@+id/sp_choose_disease"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+        </TableRow>
+
+
+        <!--    ROW 2 -->
+        <TableRow  android:layout_margin="10dp">
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/tv_diseasevalue1"
+                android:text="@string/tv_diseasevalue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="@string/diseasehint"
+                android:id="@+id/et_diseasevalue"
+                />
+
+
+         <!--   <EditText
+                android:id="@+id/et_diseasevalue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/diseasehint" />
+-->
+
+        </TableRow>
+<TableRow
+android:gravity="end"
+    >
+    <CheckBox
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="textEnd"
+        android:layout_width="wrap_content"
+        android:id="@+id/checkbox1"
+        android:text="Recovered From Disease"
+        />
+
+</TableRow>
+
+        <!--
+        <TableRow android:visibility="gone" android:id="@+id/tablerow_value1">
+
+        <EditText
+            android:hint="@string/dosagehint"
+            android:id="@+id/et_diseasevalue1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+
+             android:id="@+id/morebtn1"
+            android:text="More"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        </TableRow>
+
+
+
+        <TableRow android:id="@+id/tablerow_value2" android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_diseasevalue2"
+                android:text="@string/tv_diseasevalue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="@string/dosagehint"
+
+                android:id="@+id/et_diseasevalue2"
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/morebtn2"
+                android:text="More"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+
+        </TableRow>
+
+
+        <TableRow android:visibility="gone" android:id="@+id/tablerow_value3">
+            <TextView
+                android:id="@+id/tv_diseasevalue3"
+                android:text="@string/tv_diseasevalue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="@string/dosagehint"
+                android:layout_margin="5dp"
+
+                android:id="@+id/et_diseasevalue3"
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+       </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_startDateOfDiseases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_startDate"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/tv_pickedStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_startDate"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <ImageButton
+                android:id="@+id/ib_pickstartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/arrow_down_float" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_endDateOfDiseases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_startDateOfDiseases"
+                android:text="@string/tv_endDate"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/tv_pickedendDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pickedStartDate"
+                android:text="@string/tv_endDate"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <ImageButton
+                android:id="@+id/ib_pickedendDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/arrow_down_float" />
+
+        </TableRow>
+-->
+     <TableRow>
+         <Button
+             android:id="@+id/cancel_disease_update"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="10dp"
+             android:padding="10dp"
+             android:text="@string/reset_disease_data"
+             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+         <Button
+             android:id="@+id/saveBtn_disease"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_margin="10dp"
+             android:padding="10dp"
+             android:text="@string/button_save_text"
+             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+
+     </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout><!--
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:background="?android:attr/colorBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/tv_cdieases"
+            android:padding="5dp"
+            android:text="@string/Choose_Disease"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:layout_margin="10dp"
+            android:id="@+id/sp_choose_disease"
+            android:layout_toRightOf="@+id/tv_cdieases"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_margin="11dp"
+            android:layout_below="@+id/tv_cdieases"
+            android:id="@+id/tv_diseasevalue"
+            android:padding="5dp"
+            android:text="@string/tv_diseasevalue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:hint="@string/dosagehint"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/sp_choose_disease"
+            android:id="@+id/et_diseasevalue"
+            android:layout_toRightOf="@+id/tv_diseasevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <Button
+        android:padding="10dp"
+        android:layout_toRightOf="@id/et_diseasevalue"
+        android:layout_below="@id/sp_choose_disease"
+        android:id="@+id/morebtn"
+       android:text="More"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <TextView
+        android:visibility="gone"
+        android:layout_margin="11dp"
+        android:layout_below="@+id/tv_diseasevalue"
+        android:id="@+id/tv_diseasevalue1"
+        android:padding="5dp"
+        android:text="@string/tv_diseasevalue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:visibility="gone"
+        android:hint="@string/dosagehint"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/et_diseasevalue"
+        android:id="@+id/et_diseasevalue2"
+        android:layout_toRightOf="@+id/tv_diseasevalue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_toRightOf="@id/et_diseasevalue"
+        android:layout_below="@id/et_diseasevalue"
+        android:id="@+id/morebtn1"
+        android:text="More"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+
+    <TextView
+           android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+           android:text="@string/tv_startDate"
+           android:padding="5dp"
+           android:layout_margin="11dp"
+           android:id="@+id/tv_startDateOfDiseases"
+           android:layout_below="@id/tv_diseasevalue"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_startDateOfDiseases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/tv_startDate"
+            android:padding="5dp"
+            android:layout_margin="11dp"
+            android:id="@+id/tv_pickedStartDate"
+            android:layout_below="@id/et_diseasevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <ImageButton
+            android:layout_margin="12dp"
+            android:padding="10dp"
+            android:src="@android:drawable/arrow_down_float"
+            android:id="@+id/ib_pickstartDate"
+            android:layout_below="@id/et_diseasevalue"
+            android:layout_toRightOf="@id/tv_pickedStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageButton>
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/tv_endDate"
+            android:padding="5dp"
+            android:layout_margin="11dp"
+            android:id="@+id/tv_endDateOfDiseases"
+            android:layout_below="@id/tv_startDateOfDiseases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_startDateOfDiseases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/tv_endDate"
+            android:padding="5dp"
+            android:layout_margin="11dp"
+            android:id="@+id/tv_pickedendDate"
+            android:layout_below="@id/tv_pickedStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <ImageButton
+            android:layout_margin="12dp"
+            android:padding="10dp"
+            android:src="@android:drawable/arrow_down_float"
+            android:id="@+id/ib_pickedendDate"
+            android:layout_below="@id/tv_pickedStartDate"
+            android:layout_toRightOf="@id/tv_pickedStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageButton>
+        <Button
+            android:id="@+id/saveBtn_disease"
+            android:text="@string/button_save_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/tv_endDateOfDiseases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Button>
+    </RelativeLayout>
+
+-->

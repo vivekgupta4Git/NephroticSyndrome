@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_doctor_details_CreateNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Create New :"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:inputType="text"
+            android:id="@+id/et_doctor_details_editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_doctor_details_CreateNew"
+            android:gravity="center"
+            android:hint="Enter Doctor Name"
+            android:autofillHints="" />
+
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_below="@id/tv_doctor_details_CreateNew"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <Button
+        android:text="Create"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:id="@+id/bt_doctor_details_saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    <ListView
+
+        android:id="@+id/list_doctor_details"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    </ListView>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

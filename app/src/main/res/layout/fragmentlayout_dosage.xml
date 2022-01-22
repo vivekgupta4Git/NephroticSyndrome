@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:stretchColumns="1,2"
+    android:background="?android:attr/colorBackground">
+<TextView
+    android:textAlignment="center"
+    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+    android:text="Dosage"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    />
+<TableRow
+    android:layout_margin="10dp">
+
+    <TextView android:text="Date "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:layout_gravity="right"
+        android:id="@+id/dateTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ImageView
+        android:id="@+id/imageView"
+        android:src="@drawable/ic_register_24"/>
+
+</TableRow>
+
+    <TableRow android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/tv_cd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Choose_Disease"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Spinner
+            android:id="@+id/sp_cd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_cd" />
+
+    </TableRow>
+
+   <TableRow android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/tv_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Choose_doctor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <Spinner
+        android:id="@+id/sp_doc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_cd"
+        />
+
+    </TableRow>
+
+    <TableRow android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/tv_med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Choose_Mediicine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Spinner
+            android:id="@+id/sp_cm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+
+    <TableRow android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/tv_Dosage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_dosage"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:id="@+id/et_dosage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/dosagehint" />
+
+    </TableRow>
+    <Button
+        android:layout_below="@id/et_dosage1"
+        android:id="@+id/saveBtn_dosage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="@string/button_save_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"></Button>
+    </TableLayout>
+
+
+
+
+
+
